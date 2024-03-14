@@ -38,7 +38,7 @@ create table Entrega(
     status varchar(20)
 );
 
-create table Pedido(
+create table pedido(
     idPedido int not null primary key auto_increment,
     idCliente int not null,
     idEntrega int not null,
@@ -52,3 +52,11 @@ alter table Pedido add foreign key (idEntrega) references Entrega(idEntrega);
 alter table Entrega add foreign key (placa) references Veiculo(placa);
 alter table Entrega add foreign key (motorista) references Funcionario(idFuncionario);
 alter table Entrega add foreign key (idRota) references Rota(idRota);
+
+describe Cliente;
+describe Funcionario;
+describe Rota;
+describe Veiculo;
+describe Entrega;
+describe Pedido;
+show tables;
